@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高機能 課題管理アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1> 課題管理アプリ 🚀</h1>
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="課題名（例: 最終レポート）" required>
+            <input type="text" id="task-subject" placeholder="科目名（例: ソフトウェア工学）" required>
+            <input type="date" id="task-due-date" required>
+            <button type="submit">課題を追加</button>
+        </form>
+        
+        <div class="list-header">
+            <h2>課題リスト</h2>
+            <button id="sort-btn">期限順に並べ替え</button>
+        </div>
+        <ul id="task-list">
+            </ul>
+    </div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>課題の編集</h2>
+            <form id="edit-form">
+                <input type="hidden" id="edit-task-id">
+                <label for="edit-title">課題名:</label>
+                <input type="text" id="edit-title" required>
+                <label for="edit-subject">科目名:</label>
+                <input type="text" id="edit-subject" required>
+                <label for="edit-due-date">提出期限:</label>
+                <input type="date" id="edit-due-date" required>
+                <button type="submit">保存する</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
